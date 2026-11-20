@@ -1,251 +1,170 @@
-# Scientific Computing – BIT2118
+# BIT2118 Scientific Computing
 
-<p align="center">
-  <strong>Numerical Methods and Scientific Computing with Python</strong>
-</p>
+## Project Overview
 
-<p align="center">
-  A collaborative academic project demonstrating the application of scientific computing and numerical methods to mathematical and computational problems.
-</p>
+This repository contains our group coursework for **BIT2118 - Scientific Computing**. It demonstrates how Python can be used to translate mathematical models into numerical algorithms, test the algorithms, visualise their behaviour, and interpret the results in practical situations.
 
----
+The work is organised into three sections:
 
-## About the Project
+| Section | Purpose |
+| --- | --- |
+| [Tasks 1-8](./TASK%201-8/) | Foundational scientific-computing exercises and introductory task work. |
+| [Tasks 9-12](./numerical-methods-task-9-12/) | Structured numerical-method implementations with automated tests, plots, and written results. |
+| [Tasks 13-20](./TASK%2013-20/) | Applied examples covering interpolation, calculus, differential equations, optimisation, and simulation. |
 
-This repository contains the practical coursework and Python implementations developed for **BIT2118 – Scientific Computing**.
+The repository is intended to show both the **mathematical method** and the **computational evidence** produced by that method.
 
-The project explores numerical methods, computational techniques, and their applications in solving mathematical problems. It is organised into three sections covering Tasks 1–8, Tasks 9–12, and Tasks 13–20.
+## What the Project Demonstrates
 
-The implementations demonstrate how mathematical concepts can be translated into Python programs to obtain numerical solutions, perform calculations, and interpret computational results.
+Across the twenty tasks, the project demonstrates how to:
 
-## Project Objectives
+- represent mathematical problems as Python functions and data;
+- use numerical methods when an exact solution is difficult or unavailable;
+- compare methods and investigate convergence and accuracy;
+- use NumPy, SciPy, and Matplotlib for scientific computation;
+- test numerical results against expected mathematical conditions;
+- explain assumptions, parameter changes, limitations, and real-world meaning.
 
-The main objectives of this project are to:
+## Repository Guide
 
-- Apply scientific computing concepts using Python.
-- Implement numerical methods for solving mathematical problems.
-- Develop computational solutions using appropriate Python libraries.
-- Analyse and interpret numerical results.
-- Explore the accuracy, convergence, and limitations of numerical techniques.
-- Develop collaborative programming and version-control skills using Git and GitHub.
+### Tasks 1-8: Foundations
 
-## Repository Structure
+The [Tasks 1-8](./TASK%201-8/) directory contains the introductory coursework exercises. The section notes explain the mathematical ideas and the expected work for each task. The individual task files are stored directly in that directory.
 
-The repository is organised into the following sections:
+### Tasks 9-12: Numerical Methods with Tests
+
+This is the most structured and testable part of the repository. Source code is in `numerical-methods-task-9-12/tasks/`, tests are in `numerical-methods-task-9-12/tests/`, and generated figures and interpretations are in `numerical-methods-task-9-12/outputs/`.
+
+| Task | Method | Example application | Main file |
+| --- | --- | --- | --- |
+| 9 | Eigenvalues, eigenvectors, and eigenvector centrality | Analysing the importance of locations in a campus network | `task_09_eigenvalues.py` |
+| 10 | Bisection and fixed-point iteration | Finding greenhouse temperature equilibrium | `task_10_bisection_fixed_point.py` |
+| 11 | Newton-Raphson and secant methods | Estimating the internal rate of return for a solar-pumping investment | `task_11_newton_secant.py` |
+| 12 | Solving a nonlinear system | Finding intersections for a reservoir and embankment design | `task_12_nonlinear_equations.py` |
+
+The section's [`outputs/execution_results.md`](./numerical-methods-task-9-12/outputs/execution_results.md) file records the numerical results and interpretations. The PNG files in the same directory show convergence, heat balance, network centrality, and geometric intersections.
+
+### Tasks 13-20: Applied Numerical Computing
+
+The [Tasks 13-20](./TASK%2013-20/) directory applies additional numerical techniques to practical examples:
+
+| Task | Technique | Example application | Main file |
+| --- | --- | --- | --- |
+| 13 | Linear interpolation | Estimating a temperature between measured values | `task 13 Interpolation.py` |
+| 14 | Curve fitting | Predicting server response time from user load | `TASK14 Curve_fitting.py` |
+| 15 | Numerical differentiation | Estimating vehicle speed from GPS position data | `Task-15-Numerical-Differentiation.py` |
+| 16 | Numerical integration | Estimating energy consumption from smart-meter readings | `Task-16-Numerical-Integration.py` |
+| 17 | Euler's method for ODEs | Modelling Newton's law of cooling | `task 17 Euler's Method.py` |
+| 18 | SciPy `solve_ivp()` for ODEs | Simulating an RC charging circuit | `task 18 solve_ivp().py` |
+| 19 | Numerical optimisation | Minimising the operating cost of a server configuration | `task 19 minimize().py` |
+| 20 | Monte Carlo simulation | Estimating the probability that demand exceeds stock | `TASK -20 -monte_carlo.py` |
+
+The section-level [readme](./TASK%2013-20/readme.md) gives the mathematical background, real-world interpretation, and suggested parameter experiments for these tasks.
+
+## How to Run the Project
+
+### Requirements
+
+Install Python 3.10 or later. Tasks 9-12 require the packages listed in `numerical-methods-task-9-12/requirements.txt`:
 
 ```text
-scientific-computing/
-│
-├── TASK 1-8/
-│   └── Solutions and resources for Tasks 1–8
-│
-├── numerical-methods-task-9-12/
-│   ├── README.md
-│   ├── requirements.txt
-│   ├── .gitignore
-│   │
-│   ├── tasks/
-│   │   ├── __init__.py
-│   │   ├── task_09_eigenvalues.py
-│   │   ├── task_10_bisection_fixed_point.py
-│   │   ├── task_11_newton_secant.py
-│   │   └── task_12_nonlinear_equations.py
-│   │
-│   ├── tests/
-│   │   └── test_tasks.py
-│   │
-│   └── outputs/
-│       ├── task_09_network_centrality.png
-│       ├── task_10_heat_balance.png
-│       ├── task_10_fixed_point_convergence.png
-│       ├── task_12_intersections.png
-│       └── execution_results.md
-│
-└── TASK 13-20/
-    └── Solutions and resources for Tasks 13–20
+numpy
+scipy
+matplotlib
+pytest
 ```
 
-## Project Sections
+### Run Tasks 9-12
 
-### 1. Tasks 1–8
+From the repository root:
 
-Contains the solutions and resources for the first section of the Scientific Computing coursework.
-
-[View Tasks 1–8](./TASK%201-8/)
-
-### 2. Tasks 9–12: Numerical Methods
-
-This section focuses on implementing numerical methods in Python and applying them to practical scenarios.
-
-| Task | Numerical Method | Application |
-|---|---|---|
-| Task 9 | Eigenvalues and Eigenvectors | Campus network analysis |
-| Task 10 | Bisection and Fixed-Point Iteration | Greenhouse temperature equilibrium |
-| Task 11 | Newton-Raphson and Secant Methods | Solar-powered water pumping investment |
-| Task 12 | Nonlinear Equation Solving | Reservoir and embankment design |
-
-**Key features:**
-
-- Matrix operations and eigenvector centrality.
-- Numerical root-finding and convergence analysis.
-- Comparison of numerical algorithms.
-- Solving systems of nonlinear equations.
-- Graphical representation of numerical results.
-- Automated testing of implemented methods.
-
-[View Tasks 9–12](./numerical-methods-task-9-12/)
-
-### 3. Tasks 13–20
-
-Contains the solutions and resources for the final section of the Scientific Computing coursework.
-
-[View Tasks 13–20](./TASK%2013-20/)
-
-## Technologies and Tools
-
-The project uses the following technologies where applicable:
-
-| Technology | Purpose |
-|---|---|
-| Python 3 | Main programming language |
-| NumPy | Numerical operations and matrix calculations |
-| SciPy | Scientific and numerical algorithms |
-| Matplotlib | Data visualisation and plotting |
-| Pytest | Automated testing |
-| Git | Version control |
-| GitHub | Collaborative development and project hosting |
-
-## Getting Started
-
-### Prerequisites
-
-Ensure that you have the following installed:
-
-- Python 3
-- Git
-- pip (Python package installer)
-
-### Clone the Repository
-
-Open your terminal and run:
-
-```bash
-git clone https://github.com/WeignstoneC/scientific-computing.git
-```
-
-Navigate into the repository:
-
-```bash
-cd scientific-computing
-```
-
-### Running Tasks 9–12
-
-Navigate to the numerical methods section:
-
-```bash
+```powershell
 cd numerical-methods-task-9-12
+python -m pip install -r requirements.txt
 ```
 
-Install the required dependencies:
+Run an individual task:
 
-```bash
-pip install -r requirements.txt
-```
-
-Run the individual programs:
-
-```bash
+```powershell
 python -m tasks.task_09_eigenvalues
-```
-
-```bash
 python -m tasks.task_10_bisection_fixed_point
-```
-
-```bash
 python -m tasks.task_11_newton_secant
-```
-
-```bash
 python -m tasks.task_12_nonlinear_equations
 ```
 
-### Running Automated Tests
+These programs print numerical results and generate plots in the `outputs/` directory.
 
-From inside `numerical-methods-task-9-12`, execute:
+### Run the Automated Tests
 
-```bash
+From inside `numerical-methods-task-9-12`:
+
+```powershell
 pytest -v
 ```
 
-The tests check the implemented numerical methods and verify that the calculated solutions satisfy the relevant mathematical conditions.
+The tests verify the core calculations, including centrality, root finding, Newton/secant results, and nonlinear-equation solutions. They also check invalid input such as a non-square matrix where appropriate.
 
-## Results and Visualisation
+### Run Tasks 13-20
 
-The Tasks 9–12 section includes generated graphs and numerical results.
+The files in `TASK 13-20` are standalone Python scripts. From the repository root, run a script using quotes because some filenames contain spaces or punctuation:
 
-The `outputs/` directory contains:
-
-- Campus network centrality comparison.
-- Greenhouse heat-balance graph.
-- Fixed-point iteration convergence graph.
-- Reservoir and embankment intersection graph.
-- Numerical execution results and interpretations.
-
-These outputs help demonstrate the behaviour of the numerical methods and the effects of changing selected parameters.
-
-## Collaboration and Version Control
-
-This project is maintained collaboratively using Git and GitHub.
-
-Contributors can work on separate branches, implement their assigned tasks, and submit pull requests for review before merging their changes into the main branch.
-
-Suggested branch naming convention:
-
-```text
-feature/task-description
+```powershell
+python ".\TASK 13-20\task 13 Interpolation.py"
+python ".\TASK 13-20\TASK14 Curve_fitting.py"
+python ".\TASK 13-20\Task-15-Numerical-Differentiation.py"
+python ".\TASK 13-20\Task-16-Numerical-Integration.py"
+python ".\TASK 13-20\task 17 Euler's Method.py"
+python ".\TASK 13-20\task 18 solve_ivp().py"
+python ".\TASK 13-20\task 19 minimize().py"
+python ".\TASK 13-20\TASK -20 -monte_carlo.py"
 ```
 
-Example:
+These scripts may display plots or print calculated values. Run them one at a time so that each result can be observed and discussed.
 
-```text
-feature/bit2118-tasks-09-12
-```
+## How to Read and Assess the Results
 
-Suggested commit message format:
+For each task, follow this sequence:
 
-```text
-Add solutions for BIT2118 tasks 9-12
-```
+1. Read the mathematical concept and identify the input data and assumptions.
+2. Open the corresponding Python file and identify the implemented formula or algorithm.
+3. Run the file and record the numerical result and any generated plot.
+4. Change the suggested parameter, such as the step size, number of intervals, heat gain, cash flow, or number of Monte Carlo trials.
+5. Compare the original and modified results.
+6. Explain whether the result is accurate, convergent, stable, and meaningful for the stated application.
+
+The important evidence is not only the final number. It is the connection between the mathematical model, the algorithm, the computed output, and the interpretation.
 
 ## Assumptions and Limitations
 
-Numerical solutions depend on the mathematical models, input parameters, initial estimates, and convergence criteria used in each implementation.
+The examples use simplified models and illustrative data. Their results depend on the selected inputs, initial guesses, step sizes, stopping criteria, and convergence assumptions. A numerical answer is therefore an approximation within the stated model; it is not automatically a measurement of a real-world system.
 
-Where illustrative scenarios are used, their input values should be treated as assumptions rather than verified real-world measurements.
+Some scripts are designed for demonstration and exploration, while the Tasks 9-12 package has the clearest automated validation. Plots and generated output should be interpreted together with the source code and the written explanations.
 
-Results should therefore be interpreted in the context of the models and methods used.
+## Collaboration
+
+This is a group project maintained with Git and GitHub. Work can be organised by task section or individual task. A typical workflow is:
+
+```text
+git pull
+git checkout -b feature/task-description
+# edit and test the assigned task
+git add .
+git commit -m "Implement BIT2118 task"
+git push -u origin feature/task-description
+```
+
+Changes should be reviewed before they are merged into `main`.
 
 ## Academic Information
 
-| Detail | Information |
-|---|---|
-| Course | BIT2118 |
-| Course Name | Scientific Computing |
+| Item | Details |
+| --- | --- |
+| Course code | BIT2118 |
+| Course | Scientific Computing |
 | Project | Numerical Methods and Scientific Computing |
-| Programming Language | Python |
-| Repository | scientific-computing |
+| Language | Python |
+| Destination repository | [SCIENTIFIC-COMPUTING-GROUP-WORK](https://github.com/AlvinCharles001/SCIENTIFIC-COMPUTING-GROUP-WORK) |
 
 ## Contributors
 
-This repository is a collaborative coursework project.
-
-Contributions are organised according to the task sections and individual responsibilities of the group members.
-
----
-
-<p align="center">
-  <strong>BIT2118 – Scientific Computing</strong><br>
-  Numerical Methods • Python • Computational Problem Solving
-</p>
+This repository is a collaborative coursework submission. Contributions are organised around the task sections and the responsibilities of the group members.
