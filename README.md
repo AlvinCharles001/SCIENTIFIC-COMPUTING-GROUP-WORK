@@ -1,5 +1,6 @@
 # BIT2118 Scientific Computing
-
+## REG NO-BSCCS/2025/39841
+## NAME-ALVIN CHARLES OCHIENG
 ## Project Overview
 
 This repository contains our group coursework for **BIT2118 - Scientific Computing**. It demonstrates how Python can be used to translate mathematical models into numerical algorithms, test the algorithms, visualise their behaviour, and interpret the results in practical situations.
